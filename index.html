@@ -3,17 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome CGO Army</title>
+    <title>Gamer's Coin</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
-        <h1>Website Created By Shivam Gupta!</h1>
-        <p>Tap the circle below to earn Gamer's Coin 🎮</p>
-        <div id="coinButton" class="circle" onclick="incrementCoin()">0</div>
-        <p id="scoreDisplay">Gamer's Coin: 0</p>
-        <a href="https://youtube.com/@chocogamerofficial?si=IDbHHKi2USaEvkk8?sub_confirmation=1" target="_blank">Subscribe to My YouTube Channel</a>
+        <h1>Gamer's Coin</h1>
+        <div class="coin-display">
+            <p>Total Coins: <span id="total-coins">0</span> 🎮</p>
+            <p>Today's Coins: <span id="today-coins">0</span> 🎮</p>
+        </div>
+        <button id="coin-button" class="gamer-button">Tap to Earn 🎮</button>
     </div>
+
     <script src="script.js"></script>
 </body>
 </html>

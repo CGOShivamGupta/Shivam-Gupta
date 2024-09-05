@@ -1,43 +1,58 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #121212;
-    color: white;
-    text-align: center;
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-.container {
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #1f1c2c, #928dab);
+    color: #ffffff;
+    text-align: center;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+}
+
+.container {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 
 h1 {
-    font-size: 3rem;
+    font-size: 3em;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color: #ffcc00;
 }
 
-.circle {
-    width: 150px;
-    height: 150px;
-    background-color: #1e90ff;
+.coin-display {
+    margin-bottom: 30px;
+}
+
+.coin-display p {
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+.gamer-button {
+    background: radial-gradient(circle at 50% 50%, #ff3c00, #ff1a1a, #ff0000);
+    color: #fff;
+    font-size: 1.2em;
+    border: none;
+    padding: 15px 30px;
     border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 2rem;
     cursor: pointer;
-    margin: 20px 0;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.7);
 }
 
-a {
-    color: #1e90ff;
-    text-decoration: none;
-    font-size: 1.2rem;
-}
-
-a:hover {
-    text-decoration: underline;
+.gamer-button:hover {
+    box-shadow: 0 0 40px rgba(255, 0, 0, 0.9);
+    transform: scale(1.1);
 }
