@@ -1,34 +1,43 @@
-// Select the necessary elements
-const coinButton = document.getElementById('coin-button');
-const totalCoinsDisplay = document.getElementById('total-coins');
-const todayCoinsDisplay = document.getElementById('today-coins');
+let totalCoins = localStorage.getItem('totalCoins') ? parseInt(localStorage.getItem('totalCoins')) : 0;
+let todayCoins = sessionStorage.getItem('todayCoins') ? parseInt(sessionStorage.getItem('todayCoins')) : 0;
 
-// Load coin data from localStorage
-let totalCoins = parseInt(localStorage.getItem('totalCoins')) || 0;
-let todayCoins = parseInt(localStorage.getItem('todayCoins')) || 0;
-let lastPlayedDate = localStorage.getItem('lastPlayedDate');
+document.getElementById('totalCoins').textContent = totalCoins;
+document.getElementById('todayCoins').textContent = todayCoins;
 
-// Check if it's a new day
-const today = new Date().toLocaleDateString();
-if (lastPlayedDate !== today) {
-    todayCoins = 0; // Reset today's coins
-    localStorage.setItem('lastPlayedDate', today);
-}
+const coinButton = document.getElementById('coinButton');
+const plusOne = document.getElementById('plusOne');
 
-// Update the displays
-totalCoinsDisplay.textContent = totalCoins;
-todayCoinsDisplay.textContent = todayCoins;
-
-// Event listener for the button
 coinButton.addEventListener('click', () => {
     totalCoins++;
     todayCoins++;
-    
-    // Update the displays
-    totalCoinsDisplay.textContent = totalCoins;
-    todayCoinsDisplay.textContent = todayCoins;
-    
-    // Store the new values in localStorage
     localStorage.setItem('totalCoins', totalCoins);
-    localStorage.setItem('todayCoins', todayCoins);
+    sessionStorage.setItem('todayCoins', todayCoins);
+
+    document.getElementById('totalCoins').textContent = totalCoins;
+    document.getElementById('todayCoins').textContent = todayCoins;
+
+    // Trigger the +1 animation
+    plusOne.style.opacity = 1;
+    plusOne.style.top = '-40px';
+    setTimeout(() => {
+        plusOne.style.opacity = 0;
+        plusOne.style.top = '0px';
+    }, 500);
+});
+
+const buyButtons = document.querySelectorAll('.buy-button');
+buyButtons.forEach(button => {
+    button.addEventListener('click', (e) => {
+        const item = e.target.closest('.item');
+        const price = parseInt(item.getAttribute('data-price'));
+
+        if (totalCoins >= price) {
+            totalCoins -= price;
+            localStorage.setItem('totalCoins', totalCoins);
+            document.getElementById('totalCoins').textContent = totalCoins;
+            alert('Purchase successful!');
+        } else {
+            alert('Not enough Gamer\'s Coins 🎮!');
+        }
+    });
 });

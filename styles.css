@@ -1,58 +1,105 @@
-* {
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, #1f1c2c, #928dab);
+    background-color: #121212;
     color: #ffffff;
     text-align: center;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
 
-.container {
-    background-color: rgba(0, 0, 0, 0.7);
+header {
+    background-color: #1e1e1e;
     padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    border-bottom: 2px solid #444;
 }
 
 h1 {
-    font-size: 3em;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-    letter-spacing: 5px;
-    color: #ffcc00;
+    margin: 0;
+    font-size: 2em;
+    color: #f9a825;
 }
 
-.coin-display {
-    margin-bottom: 30px;
+nav a {
+    color: #f9a825;
+    text-decoration: none;
+    font-weight: bold;
 }
 
-.coin-display p {
+main {
+    padding: 20px;
+}
+
+.game-section, .purchase-section, .videos-section {
+    margin: 20px 0;
+}
+
+.coin-info p {
     font-size: 1.5em;
-    margin: 10px 0;
 }
 
-.gamer-button {
-    background: radial-gradient(circle at 50% 50%, #ff3c00, #ff1a1a, #ff0000);
-    color: #fff;
-    font-size: 1.2em;
-    border: none;
+.coin-button {
+    background-color: #f9a825;
+    color: #000;
     padding: 15px 30px;
-    border-radius: 50%;
+    border: none;
+    font-size: 1.2em;
     cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 0 20px rgba(255, 0, 0, 0.7);
+    transition: transform 0.1s;
+    position: relative;
 }
 
-.gamer-button:hover {
-    box-shadow: 0 0 40px rgba(255, 0, 0, 0.9);
-    transform: scale(1.1);
+.coin-button:focus {
+    outline: none;
+}
+
+.coin-button:active {
+    transform: scale(0.95);
+}
+
+.plus-one-animation {
+    font-size: 1.5em;
+    color: #f9a825;
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s, top 0.5s;
+}
+
+.store {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.item {
+    background-color: #1e1e1e;
+    border: 1px solid #444;
+    padding: 20px;
+    margin: 10px;
+    width: 200px;
+    text-align: center;
+}
+
+.item img {
+    max-width: 100%;
+    height: auto;
+}
+
+.buy-button {
+    background-color: #f9a825;
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+footer {
+    background-color: #1e1e1e;
+    padding: 10px;
+    border-top: 2px solid #444;
+    margin-top: 20px;
 }

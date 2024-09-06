@@ -3,19 +3,311 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gamer's Coin</title>
+    <meta name="description" content="Welcome to the Gamer's Coin game. Earn coins and buy cool gaming equipment.">
+    <title>Web by Shivam | Gamer's Coin 🎮</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Gamer's Coin</h1>
-        <div class="coin-display">
-            <p>Total Coins: <span id="total-coins">0</span> 🎮</p>
-            <p>Today's Coins: <span id="today-coins">0</span> 🎮</p>
-        </div>
-        <button id="coin-button" class="gamer-button">Tap to Earn 🎮</button>
-    </div>
+    <header>
+        <h1>Web by Shivam</h1>
+        <nav>
+            <a href="https://youtube.com/@chocogamerofficial?si=IDbHHKi2USaEvkk8?sub_confirmation=1" target="_blank">Visit My YouTube Channel</a>
+        </nav>
+    </header>
 
-    <script src="script.js"></script>
-</body>
-</html>
+    <main>
+        <section class="game-section">
+            <h2>Gamer's Coin 🎮</h2>
+            <div class="coin-info">
+                <p>Total Coins: <span id="totalCoins">0</span> 🎮</p>
+                <p>Today's Coins: <span id="todayCoins">0</span> 🎮</p>
+            </div>
+            <button id="coinButton" class="coin-button">Tap to Earn Coins 🎮</button>
+            <div id="plusOne" class="plus-one-animation">+1</div>
+        </section>
+
+        <section class="purchase-section">
+            <h2>Buy Gaming Equipment</h2>
+            <div class="store">
+                <!-- Repeated gaming equipment items -->
+                <!-- Adding 100+ items -->
+                <div class="item" data-price="50">
+                    <img src="gaming-mouse.jpg" alt="Gaming Mouse">
+                    <p>Gaming Mouse</p>
+                    <p>Price: 50 🎮</p>
+                    <button class="buy-button">Buy</button>
+                </div>
+                <div class="item" data-price="100">
+                    <img src="gaming-headset.jpg" alt="Gaming Headset">
+                    <p>Gaming Headset</p>
+                    <p>Price: 100 🎮</p>
+                    <button class="buy-button">Buy</button>
+                </div>
+                <div class="item" data-price="200">
+                    <img src="gaming-chair.jpg" alt="Gaming Chair">
+                    <p>Gaming Chair</p>
+                    <p>Price: 200 🎮</p>
+                    <button class="buy-button">Buy</button>
+                </div>
+                <div class="item" data-price="300">
+                    <img src="gaming-keyboard.jpg" alt="Gaming Keyboard">
+                    <p>Gaming Keyboard</p>
+                    <p>Price: 300 🎮</p>
+                    <button class="buy-button">Buy</button>
+                </div>
+                <div class="item" data-price="400">
+                    <img src="gaming-monitor.jpg" alt="Gaming Monitor">
+                    <p>Gaming Monitor</p>
+                    <p>Price: 400 🎮</p>
+                    <button class="buy-button">Buy</button>
+                </div>
+                <div class="item" data-price="500">
+                    <img src="gaming-pc.jpg" alt="Gaming PC">
+                    <p>Gaming PC</p>
+                    <p>Price: 500 🎮</p>
+                    <button class="buy-button">Buy</button>
+                </div>
+                <div class="item" data-price="600">
+                    <img src="gaming-laptop.jpg" alt="Gaming Laptop">
+                    <p>Gaming Laptop</p>
+                    <p>Price: 600 🎮</p>
+                    <button class="buy-button">Buy</button>
+                </div>
+                <div class="item" data-price="700">
+                    <img src="vr-headset.jpg" alt="VR Headset">
+                    <p>VR Headset</p>
+                    <p>Price: 700 🎮</p>
+                    <button class="buy-button">Buy</button>
+                </div>
+                <div class="item" data-price="800">
+                    <img src="gaming-controller.jpg" alt="Gaming Controller">
+                    <p>Gaming Controller</p>
+                    <p>Price: 800 🎮</p>
+                    <button class="buy-button">Buy</button>
+                </div>
+                <div class="item" data-price="900">
+                    <img src="gaming-table.jpg" alt="Gaming Table">
+                    <p>Gaming Table</p>
+                    <p>Price: 900 🎮</p>
+                    <button class="buy-button">Buy</button>
+                </div>
+                <div class="item" data-price="1000">
+                    <img src="gaming-lights.jpg" alt="Gaming Lights">
+                    <p>Gaming Lights</p>
+                    <p>Price: 1000 🎮</p>
+                    <button class="buy-button">Buy</button>
+                </div>
+                <!-- Continue adding more items -->
+                <div class="item" data-price="1100">
+                    <img src="gaming-router.jpg" alt="Gaming Router">
+                    <p>Gaming Router</p>
+                    <p>Price: 1100 🎮</p>
+                    <button class="buy-button">Buy</button>
+                </div>
+                <div class="item" data-price="1200">
+                    <img src="gaming-capture-card.jpg" alt="Gaming Capture Card">
+                    <p>Gaming Capture Card</p>
+                    <p>Price: 1200 🎮</p>
+                    <button class="buy-button">Buy</button>
+                </div>
+                <div class="item" data-price="1300">
+                    <img src="gaming-backpack.jpg" alt="Gaming Backpack">
+                    <p>Gaming Backpack</p>
+                    <p>Price: 1300 🎮</p>
+                    <button class="buy-button">Buy</button>
+                </div>
+                <div class="item" data-price="1400">
+                    <img src="gaming-speakers.jpg" alt="Gaming Speakers">
+                    <p>Gaming Speakers</p>
+                    <p>Price: 1400 🎮</p>
+                    <button class="buy-button">Buy</button>
+                </div>
+                <div class="item" data-price="1500">
+                    <img src="gaming-stream-deck.jpg" alt="Gaming Stream Deck">
+                    <p>Gaming Stream Deck</p>
+                    <p>Price: 1500 🎮</p>
+                    <button class="buy-button">Buy</button>
+                </div>
+                <div class="item" data-price="1600">
+                    <img src="gaming-headphone-stand.jpg" alt="Gaming Headphone Stand">
+                    <p>Gaming Headphone Stand</p>
+                    <p>Price: 1600 🎮</p>
+                    <button class="buy-button">Buy</button>
+                </div>
+                <div class="item" data-price="1700">
+                    <img src="gaming-desk-pad.jpg" alt="Gaming Desk Pad">
+                    <p>Gaming Desk Pad</p>
+                    <p>Price: 1700 🎮</p>
+                    <button class="buy-button">Buy</button>
+                </div>
+                <div class="item" data-price="1800">
+                    <img src="gaming-mousepad.jpg" alt="Gaming Mousepad">
+                    <p>Gaming Mousepad</p>
+                    <p>Price: 1800 🎮</p>
+                    <button class="buy-button">Buy</button>
+                </div>
+                <div class="item" data-price="1900">
+                    <img src="gaming-microphone.jpg" alt="Gaming Microphone">
+                    <p>Gaming Microphone</p>
+                    <p>Price: 1900 🎮</p>
+                    <button class="buy-button">Buy</button>
+                </div>
+                <div class="item" data-price="2000">
+                    <img src="gaming-desk.jpg" alt="Gaming Desk">
+                    <p>Gaming Desk</p>
+                    <p>Price: 2000 🎮</p>
+                    <button class="buy-button">Buy</button>
+                </div>
+                <!-- Add more items to reach 100+ -->
+                <!-- Example: Just continue duplicating similar items with unique prices, names, and images -->
+                <div class="item" data-price="2100">
+                    <img src="gaming-keyboard-light.jpg" alt="Gaming Keyboard Light">
+                    <p>Gaming Keyboard Light</p>
+                    <p>Price: 2100 🎮</p>
+                    <button class="buy-button">Buy</button>
+                </div>
+                <div class="item" data-price="2200">
+                    <img src="gaming-chair-pad.jpg" alt="Gaming Chair Pad">
+                    <p>Gaming Chair Pad</p>
+                    <p>Price: 2200 🎮</p>
+                    <button class="buy-button">Buy</button>
+                    </div>
+<div class="item" data-price="2300">
+    <img src="gaming-chair-rgb.jpg" alt="RGB Gaming Chair">
+    <p>RGB Gaming Chair</p>
+    <p>Price: 2300 🎮</p>
+    <button class="buy-button">Buy</button>
+</div>
+<div class="item" data-price="2400">
+    <img src="gaming-mouse-wireless.jpg" alt="Wireless Gaming Mouse">
+    <p>Wireless Gaming Mouse</p>
+    <p>Price: 2400 🎮</p>
+    <button class="buy-button">Buy</button>
+</div>
+<div class="item" data-price="2500">
+    <img src="gaming-soundbar.jpg" alt="Gaming Soundbar">
+    <p>Gaming Soundbar</p>
+    <p>Price: 2500 🎮</p>
+    <button class="buy-button">Buy</button>
+</div>
+<div class="item" data-price="2600">
+    <img src="gaming-ssd.jpg" alt="Gaming SSD">
+    <p>Gaming SSD</p>
+    <p>Price: 2600 🎮</p>
+    <button class="buy-button">Buy</button>
+</div>
+<div class="item" data-price="2700">
+    <img src="gaming-processor.jpg" alt="Gaming Processor">
+    <p>Gaming Processor</p>
+    <p>Price: 2700 🎮</p>
+    <button class="buy-button">Buy</button>
+</div>
+<div class="item" data-price="2800">
+    <img src="gaming-motherboard.jpg" alt="Gaming Motherboard">
+    <p>Gaming Motherboard</p>
+    <p>Price: 2800 🎮</p>
+    <button class="buy-button">Buy</button>
+</div>
+<div class="item" data-price="2900">
+    <img src="gaming-cooler.jpg" alt="Gaming Cooler">
+    <p>Gaming Cooler</p>
+    <p>Price: 2900 🎮</p>
+    <button class="buy-button">Buy</button>
+</div>
+<div class="item" data-price="3000">
+    <img src="gaming-ram.jpg" alt="Gaming RAM">
+    <p>Gaming RAM</p>
+    <p>Price: 3000 🎮</p>
+    <button class="buy-button">Buy</button>
+</div>
+<div class="item" data-price="3100">
+    <img src="gaming-gpu.jpg" alt="Gaming GPU">
+    <p>Gaming GPU</p>
+    <p>Price: 3100 🎮</p>
+    <button class="buy-button">Buy</button>
+</div>
+<div class="item" data-price="3200">
+    <img src="gaming-case.jpg" alt="Gaming Case">
+    <p>Gaming Case</p>
+    <p>Price: 3200 🎮</p>
+    <button class="buy-button">Buy</button>
+</div>
+<div class="item" data-price="3300">
+    <img src="gaming-capture-device.jpg" alt="Gaming Capture Device">
+    <p>Gaming Capture Device</p>
+    <p>Price: 3300 🎮</p>
+    <button class="buy-button">Buy</button>
+</div>
+<div class="item" data-price="3400">
+    <img src="gaming-hdd.jpg" alt="Gaming HDD">
+    <p>Gaming HDD</p>
+    <p>Price: 3400 🎮</p>
+    <button class="buy-button">Buy</button>
+</div>
+<div class="item" data-price="3500">
+    <img src="gaming-desk.jpg" alt="Advanced Gaming Desk">
+    <p>Advanced Gaming Desk</p>
+    <p>Price: 3500 🎮</p>
+    <button class="buy-button">Buy</button>
+</div>
+<div class="item" data-price="3600">
+    <img src="gaming-router-advanced.jpg" alt="Advanced Gaming Router">
+    <p>Advanced Gaming Router</p>
+    <p>Price: 3600 🎮</p>
+    <button class="buy-button">Buy</button>
+</div>
+<div class="item" data-price="3700">
+    <img src="gaming-graphics-tablet.jpg" alt="Gaming Graphics Tablet">
+    <p>Gaming Graphics Tablet</p>
+    <p>Price: 3700 🎮</p>
+    <button class="buy-button">Buy</button>
+</div>
+<div class="item" data-price="3800">
+    <img src="gaming-desk-organizer.jpg" alt="Gaming Desk Organizer">
+    <p>Gaming Desk Organizer</p>
+    <p>Price: 3800 🎮</p>
+    <button class="buy-button">Buy</button>
+</div>
+<div class="item" data-price="3900">
+    <img src="gaming-rgb-strip.jpg" alt="RGB Light Strip">
+    <p>RGB Light Strip</p>
+    <p>Price: 3900 🎮</p>
+    <button class="buy-button">Buy</button>
+</div>
+<div class="item" data-price="4000">
+    <img src="gaming-usb-hub.jpg" alt="Gaming USB Hub">
+    <p>Gaming USB Hub</p>
+    <p>Price: 4000 🎮</p>
+    <button class="buy-button">Buy</button>
+</div>
+<div class="item" data-price="4100">
+    <img src="gaming-microphone-advanced.jpg" alt="Advanced Gaming Microphone">
+    <p>Advanced Gaming Microphone</p>
+    <p>Price: 4100 🎮</p>
+    <button class="buy-button">Buy</button>
+</div>
+<div class="item" data-price="4200">
+    <img src="gaming-webcam.jpg" alt="Gaming Webcam">
+    <p>Gaming Webcam</p>
+    <p>Price: 4200 🎮</p>
+    <button class="buy-button">Buy</button>
+</div>
+<div class="item" data-price="4300">
+    <img src="gaming-battery-backup.jpg" alt="Gaming Battery Backup">
+    <p>Gaming Battery Backup</p>
+    <p>Price: 4300 🎮</p>
+    <button class="buy-button">Buy</button>
+</div>
+<div class="item" data-price="4400">
+    <img src="gaming-bluetooth-adapter.jpg" alt="Gaming Bluetooth Adapter">
+    <p>Gaming Bluetooth Adapter</p>
+    <p>Price: 4400 🎮</p>
+    <button class="buy-button">Buy</button>
+</div>
+            </div>
+        </section>
+
+        <section class="videos-section">
+            <h2>Featured Gaming Videos</h2>
+            <div class="video">
+                <iframe width="560" height="315" src="https://youtube.com/shorts/d2a_871lmTw?si=B4QWwUK6AkAFHkvE 
