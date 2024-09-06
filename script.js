@@ -1,43 +1,28 @@
-let totalCoins = localStorage.getItem('totalCoins') ? parseInt(localStorage.getItem('totalCoins')) : 0;
-let todayCoins = sessionStorage.getItem('todayCoins') ? parseInt(sessionStorage.getItem('todayCoins')) : 0;
+// Initialize the coin variables
+let totalCoins = parseInt(localStorage.getItem("totalCoins")) || 0;
+let todayCoins = 0; // Reset daily coins each time page is loaded
 
-document.getElementById('totalCoins').textContent = totalCoins;
-document.getElementById('todayCoins').textContent = todayCoins;
+// Update the coin display on page load
+document.getElementById("totalCoins").innerText = totalCoins;
+document.getElementById("todayCoins").innerText = todayCoins;
 
-const coinButton = document.getElementById('coinButton');
-const plusOne = document.getElementById('plusOne');
+// Coin increment function
+document.getElementById("coinButton").addEventListener("click", () => {
+    // Increase coins
+    totalCoins += 1;
+    todayCoins += 1;
 
-coinButton.addEventListener('click', () => {
-    totalCoins++;
-    todayCoins++;
-    localStorage.setItem('totalCoins', totalCoins);
-    sessionStorage.setItem('todayCoins', todayCoins);
+    // Update the display
+    document.getElementById("totalCoins").innerText = totalCoins;
+    document.getElementById("todayCoins").innerText = todayCoins;
 
-    document.getElementById('totalCoins').textContent = totalCoins;
-    document.getElementById('todayCoins').textContent = todayCoins;
+    // Save total coins to localStorage
+    localStorage.setItem("totalCoins", totalCoins);
 
-    // Trigger the +1 animation
-    plusOne.style.opacity = 1;
-    plusOne.style.top = '-40px';
+    // Display the +1 animation
+    const plusOne = document.getElementById("plusOne");
+    plusOne.classList.add("active");
     setTimeout(() => {
-        plusOne.style.opacity = 0;
-        plusOne.style.top = '0px';
-    }, 500);
-});
-
-const buyButtons = document.querySelectorAll('.buy-button');
-buyButtons.forEach(button => {
-    button.addEventListener('click', (e) => {
-        const item = e.target.closest('.item');
-        const price = parseInt(item.getAttribute('data-price'));
-
-        if (totalCoins >= price) {
-            totalCoins -= price;
-            localStorage.setItem('totalCoins', totalCoins);
-            document.getElementById('totalCoins').textContent = totalCoins;
-            alert('Purchase successful!');
-        } else {
-            alert('Not enough Gamer\'s Coins 🎮!');
-        }
-    });
+        plusOne.classList.remove("active");
+    }, 800);
 });
